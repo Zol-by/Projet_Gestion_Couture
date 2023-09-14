@@ -24,7 +24,7 @@
                                 </tr>
 
                                 </thead>
-                                @foreach ($depenses as $dep)
+                                @foreach ($depense as $dep)
                                 <tr class="text-center">
                                     <td>{{ $dep->id }}</td>
                                     <td>{{ $dep->nom_personnel }}</td>

@@ -16,64 +16,33 @@
 
                                 <thead>
                                  <tr>
-                                     <th>N°</th>
-                                     <th>Client</th>
-                                     <th>Modèle</th>
-                                     <th>Taille</th>
+                                     <th>N° enregistrement</th>
+                                     <th>Client n°</th>
+                                     <th>Modèle n°</th>
                                      <th>Actions</th>
                                  </tr>
                                 </thead>
-                                <tr>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
+                                @foreach ($commande as $comd)
+
+                                <tr class="text-center">
+                                    <td>{{ $comd->id }}</td>
+                                    <td>{{ $comd->id_client }}</td>
+                                    <td>{{ $comd->id_modele  }}</td>
                                     <td>
                                         <a href="">
-                                            <i class="fa fa-eye" title="détaille"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="fa fa-pencil" title="modifier"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="fa fa-trash" title="supprimer"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td>Vide</td>
-                                        <td>Vide</td>
-                                        <td>Vide</td>
-                                        <td>Vide</td>
-                                        <td>
-                                            <a href="">
                                                 <i class="fa fa-eye" title="détaille"></i>
-                                            </a>
-                                            <a href="">
-                                                <i class="fa fa-pencil" title="modifier"></i>
-                                            </a>
-                                            <a href="">
-                                                <i class="fa fa-trash" title="supprimer"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                <tr>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>
-                                        <a href="">
-                                            <i class="fa fa-eye" title="détaille"></i>
                                         </a>
                                         <a href="">
                                             <i class="fa fa-pencil" title="modifier"></i>
                                         </a>
                                         <a href="">
-                                            <i class="fa fa-trash" title="supprimer"></i>
+                                                <i class="fa fa-trash" title="supprimer"></i>
                                         </a>
-                                    </td>
+                                </td>
                                 </tr>
+
+                                @endforeach
+
                              </table>
                         </div>
                     </div>

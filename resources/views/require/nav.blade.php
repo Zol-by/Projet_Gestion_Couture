@@ -69,7 +69,7 @@
                 </ul>
             </li>
 
-            <li>
+            {{-- <li>
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="icon-grid menu-icon"></i><span class="nav-text">Gestion Utilisateurs</span>
                 </a>
@@ -77,7 +77,7 @@
                     <li><a href="{{ route('new_compte') }}">Créer un User</a></li>
                     <li><a href="{{ route('liste_compte') }}">Liste des Users</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
         </ul>
     </div>

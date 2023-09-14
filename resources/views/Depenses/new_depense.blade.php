@@ -28,8 +28,9 @@
                                     <label for="">Choisire l'employé</label>
                                     <select name="nom_personnel" class="form-control" required>
                                         <option>Veuillez choisir</option>
-                                        <option value="Kabore">Kabore</option>
-                                        <option value="Tapsoba">Tapsoba</option>
+                                        @foreach ($personnel as $perso)
+                                            <option value="{{ $perso->nom_prenom }}">{{ $perso->nom_prenom }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

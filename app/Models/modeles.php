@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use APP\Models\commandes;
 
 class modeles extends Model
 {
@@ -14,5 +15,7 @@ class modeles extends Model
         'duree_couture',
         // 'photo_model',
     ];
-    use HasFactory;
+    function commande(){
+        return $this->hasOne(commande::class);
+    }
 }

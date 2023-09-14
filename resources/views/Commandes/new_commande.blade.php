@@ -9,9 +9,16 @@
                 <div class="card-body">
                     <div class="active-member">
                         <h3 class="text-center"><strong>ENREGISTREMENT D'UNE NOUVELLE COMMANDE</strong></h3>
-
                         <div class="form-validation">
+                        @if (session('status'))
+
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+
+                        @endif
                         <form action="{{ route('store_commande') }}" method="POST">
+                            @csrf
                                 <div>
                                     <section>
                                         <div class="row">
@@ -77,7 +84,7 @@
                                             <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <label for="">Mesure de la poitrine </label>
-                                                    <input type="number" class="form-control" name="mes_poitrine " placeholder="00 cm">
+                                                    <input type="number" class="form-control" name="mes_poitrine" placeholder="00 cm">
                                                 </div>
                                             </div>
 

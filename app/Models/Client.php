@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use APP\Models\commandes;
 
 class Client extends Model
 {
@@ -13,5 +14,7 @@ class Client extends Model
         'telephone',
         'sexe',
     ];
-    use HasFactory;
+    function commande(){
+        return $this->hasOne(commande::class);
+    }
 }

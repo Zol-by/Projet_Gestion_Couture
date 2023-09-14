@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\depenses;
-
+use App\Models\Personnel;
 
 class DepensesController extends Controller
 {
@@ -14,8 +14,8 @@ class DepensesController extends Controller
      */
     public function index()
     {
-        $depenses = depenses::all();
-        return view('Depenses.depenses', compact('depenses'));
+        $depense = depenses::all();
+        return view('Depenses.depenses', compact('depense'));
     }
 
     /**
@@ -23,7 +23,9 @@ class DepensesController extends Controller
      */
     public function create_depense()
     {
-        return view('Depenses.new_depense');
+
+        $personnel = Personnel::all();
+        return view('Depenses.new_depense', compact('personnel'));
     }
 
     /**
