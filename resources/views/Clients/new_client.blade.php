@@ -7,14 +7,6 @@
             <div class="card-body">
             <h3 class="text-center"><strong>ENREGISTREMENT D'UN CLIENT</strong></h3>
 
-            @if (session('status'))
-
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-
-            @endif
-
             <form action="{{ route('store_client') }}" method="POST">
                 @csrf
 
