@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use APP\Models\Client;
-use APP\Models\modeles;
+
 use Illuminate\Databasse\Eloquent\Relations\BelongsTo;
 
 class commandes extends Model
@@ -16,12 +15,15 @@ class commandes extends Model
     ];
     use HasFactory;
 
-    function create_client (){
+    function Client (){
         return $this->belongsTo(Client::class,'id_client');
     }
 
-    function create_modele (){
-        return $this->belongsTo(Client::class,'id1_modele');
+    function modeles (){
+        return $this->belongsTo(modeles::class,'id_modele');
+    }
+    function facture(){
+        return $this->hasOne(facture::class);
     }
 }
 

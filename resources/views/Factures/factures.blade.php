@@ -16,20 +16,17 @@
 
                                 <thead>
                                  <tr class="text-center">
+                                     <th>N°</th>
                                      <th>Nom de client</th>
-                                     <th>Sexe</th>
-                                     <th>Adresse</th>
-                                     <th>Téléphone</th>
-                                     <th>Enregistré</th>
-                                     <th>Actions</th>
+                                     <th>Commande n°</th>
                                  </tr>
                                 </thead>
+                                @foreach ($factures as $fact)
+
                                 <tr class="text-center">
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
-                                    <td>Vide</td>
+                                    <td>{{ $fact->id }}</td>
+                                    <td>{{ $fact->Client->nom_prenom  }}</td>
+                                    <td>{{ $fact->id_commande }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-pencil"></i>
@@ -37,7 +34,13 @@
                                         <a href="">
                                             <i class="fa fa-trash "></i>
                                         </a>
+                                        <a href="">
+                                                <i class="fa fa-print "></i>
+                                            </a>
                                     </td>
+                                </tr>
+
+                                    @endforeach
                                 </tr>
 
                              </table>

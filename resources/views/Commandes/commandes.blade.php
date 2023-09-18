@@ -10,7 +10,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title"><strong>LISTE DES MESURES ENREGISTRES</strong> <i class="icon-note menu-icon"></i></h4>
+                            @if (session('status'))
 
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+
+                            @endif
                             <table class="table table-striped table-bordered zero-configuration">
                                 <h2 class="text-center"></h2>
 
@@ -26,8 +32,8 @@
 
                                 <tr class="text-center">
                                     <td>{{ $comd->id }}</td>
-                                    <td>{{ $comd->id_client }}</td>
-                                    <td>{{ $comd->id_modele  }}</td>
+                                    <td>{{ $comd->Client->nom_prenom }}</td>
+                                    <td>{{ $comd->modeles->libele_modele }}</td>
                                     <td>
                                         <a href="">
                                                 <i class="fa fa-eye" title="détaille"></i>

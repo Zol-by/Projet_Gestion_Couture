@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Client;
 use App\Models\commandes;
+use App\Models\factures;
 
 class FacturesController extends Controller
 {
@@ -14,7 +15,8 @@ class FacturesController extends Controller
      */
     public function index()
     {
-        return view('Factures.factures');
+        $factures = factures::all();
+        return view('Factures.factures', compact('factures'));
     }
 
     /**
@@ -33,7 +35,20 @@ class FacturesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $request->validate([
+        //     'id_client' => 'required',
+        //     'id_commande' => 'required',
+
+
+        // ]);
+
+        $factures = new factures();
+
+        $factures->id_client = $request->id_client;
+        $factures->id_commande = $request->id_commande;
+        $factures->save();
+
+        return redirect()->route('create_facture')->with('status', 'La facture a été bien enregistré avec succès !');
     }
 
     /**

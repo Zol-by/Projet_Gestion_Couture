@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use APP\Models\commandes;
+use APP\Models\facture;
 
 class Client extends Model
 {
@@ -16,5 +17,8 @@ class Client extends Model
     ];
     function commande(){
         return $this->hasOne(commande::class);
+    }
+    function facture(){
+        return $this->hasOne(facture::class);
     }
 }

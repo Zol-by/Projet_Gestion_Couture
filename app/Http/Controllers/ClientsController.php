@@ -43,7 +43,7 @@ class ClientsController extends Controller
 
         $client->save();
 
-        return redirect()->route('create_client')->with('status', 'Le client a été bien enregistré avec succès !');
+        return redirect()->route('liste_client')->with('status', 'Le client a été bien enregistré avec succès !');
     }
 
     /**

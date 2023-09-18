@@ -26,7 +26,6 @@ class CommandesController extends Controller
     {
         $modele = modeles::all();
         $clients = Client::all();
-
         return view('Commandes.new_commande', compact('modele','clients'));
     }
 
@@ -38,7 +37,7 @@ class CommandesController extends Controller
     {
         commandes::create($request->all());
 
-        return redirect()->route('create_commande')->with('status', 'La commande a été bien enregistré avec succès !');
+        return redirect()->route('liste_commande')->with('status', 'La commande a été bien enregistré avec succès !');
     }
 
     /**

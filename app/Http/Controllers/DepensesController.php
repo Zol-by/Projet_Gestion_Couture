@@ -40,7 +40,7 @@ class DepensesController extends Controller
         $depense->description = $request->description;
         $depense->save();
 
-        return redirect()->route('create_depense')->with('status', 'L\'enregistrement de la depense ont été fait avec succès !');
+        return redirect()->route('liste_depense')->with('status', 'L\'enregistrement de la depense ont été fait avec succès !');
 
 
     }

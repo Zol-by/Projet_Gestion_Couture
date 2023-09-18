@@ -10,13 +10,7 @@
                     <div class="active-member">
                         <h3 class="text-center"><strong>ENREGISTREMENT D'UNE NOUVELLE COMMANDE</strong></h3>
                         <div class="form-validation">
-                        @if (session('status'))
-
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-
-                        @endif
+                       
                         <form action="{{ route('store_commande') }}" method="POST">
                             @csrf
                                 <div>
