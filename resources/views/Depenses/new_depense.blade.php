@@ -4,20 +4,11 @@
 
 <br>
 
-
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
             <h3 class="text-center"><strong>ENREGISTREMENT D'UNE DEPENSE</strong></h3>
 
-
-            @if (session('status'))
-
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-
-            @endif
             <form action="{{ route('store_depense') }}" method="POST">
                 @csrf
                 <div>
